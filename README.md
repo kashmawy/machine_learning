@@ -9,3 +9,6 @@ Projects for Machine Learning:
 5. [Ensemble](Ensemble.ipynb): Using Ensemble techniques.
 6. [Support Vector Machines](SVM.ipynb): Using Support Vector Machines.
 
+Projects for Deep Learning:
+
+1. [Generative Adversarial Networks](deep_learning/GAN/MNIST/): Generative Adversarial Networks for MNIST.
