@@ -86,10 +86,21 @@ If you look at the training batch, it tries to do two things:
 
 The following shows the progress of how the generator improves at 500 intervals:
 
+500 Mark:
 ![MNIST 500](mnist_500.png)
+
+1000 Mark:
 ![MNIST 1000](mnist_1000.png)
+
+1500 Mark:
 ![MNIST 1500](mnist_1500.png)
+
+2000 Mark:
 ![MNIST 2000](mnist_2000.png)
+
+2500 Mark:
 ![MNIST 2500](mnist_2500.png)
+
+3000 Mark:
 ![MNIST 3000](mnist_3000.png)
 
