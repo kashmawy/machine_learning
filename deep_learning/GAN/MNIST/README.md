@@ -16,19 +16,15 @@ Input is: 28x28x1
 | 5x5 Convolution with stride of 2                 | Batchx14x14x64           |
 | Leaky RELU with alpha of 0.2                     | SAME                     |
 | Dropout with 0.4 probability                     | SAME                     |
-
 | 5x5 Convolution with stride of 2                 | Batchx7x7x128            |
 | Leaky RELU with alpha of 0.2                     | SAME                     |
 | Dropout with 0.4 probability                     | SAME                     |
-
 | 5x5 Convolution with stride of 2                 | Batchx4x4x256            |
 | Leaky RELU with alpha of 0.2                     | SAME                     |
 | Dropout with 0.4 probability                     | SAME                     |
-
 | 5x5 Convolution with stride of 2                 | Batchx4x4x512            |
 | Leaky RELU with alpha of 0.2                     | SAME                     |
 | Dropout with 0.4 probability                     | SAME                     |
-
 | Reshape to 8192                                  | Batchx8192               |
 | Fully Connected Layer                            | Batchx1                  |
 | Sigmoid activation                               | SAME                     |
