@@ -30,6 +30,8 @@ Input is: 28x28x1
 | Sigmoid activation                               | SAME                     |
 
 Output is the probability that 28x28x1 is a digit and it is between 0.0 and 1.0
+RMSprop with learning rate of 0.0002 and decay of 6e-8 is used here.
+Loss used is binary_crossentropy
 
 The following shows the generator architecture:
 
@@ -59,4 +61,35 @@ Input is: 100
 Output is 28x28x1 which the generator will try to make to resemble a digit.
 
 
+The adversial network consists of Generator followed by Discriminator.
+RMSprop with learning rate of 0.0001 and decay of 3e-8 is used here.
+Loss used is binary_crossentropy.
+
+# Training
+
+10000 training steps with batch size of 256 is used and a check point each 500 interval.
+Each training step the following happens:
+
+1. Random 256 images are selected from MNIST
+2. A noise is generated from a uniform distribution between -1.0 and 1.0 with shape (batch_size, 100)
+3. Fake images are generated from the generator given the noise
+4. X is the result from 1 (real images) concatenated with result from 3 (fake images). Y is 1 for the real images and 0 for the fake images.
+5. The discriminator is trained on that batch from step 4.
+6. Noise is generated as random distribution from -1.0 to 1.0 as X, and 1 as Y and it is fed to the adverserial network.
+
+If you look at the training batch, it tries to do two things:
+
+1. Train Discriminator to distinguish between real images and fake images.
+2. Train Adverserial that way the feedback from the discriminator will help the generator in order to tweak the images to look real.
+
+# Progress
+
+The following shows the progress of how the generator improves at 500 intervals:
+
+![MNIST 500](mnist_500.png)
+![MNIST 1000](mnist_1000.png)
+![MNIST 1500](mnist_1500.png)
+![MNIST 2000](mnist_2000.png)
+![MNIST 2500](mnist_2500.png)
+![MNIST 3000](mnist_3000.png)
 
